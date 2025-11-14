@@ -30,14 +30,21 @@
             font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            /* was center */
             justify-content: center;
+            padding: 20px 0;
+            /* small top/bottom space */
             background: radial-gradient(circle at top, #170835 0, #342062 35%, #4a2e7c 55%, #1a0f3f 100%);
             background-size: 200% 200%;
             animation: bgShift 20s ease-in-out infinite alternate;
-            overflow: hidden;
+            overflow-y: auto;
+            /* allow vertical scroll */
+            overflow-x: hidden;
+            /* keep horizontal hidden if you want */
             color: #fff;
         }
+
 
         @keyframes bgShift {
             0% {
